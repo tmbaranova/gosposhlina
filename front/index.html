@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>Калькулятор вступления в силу решения суда</title>
+</head>
+
+<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+
+				<h1>TmB</h1>
+
+			</header>
+
+		<!-- Page Wrapper -->
+
+                <section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header><h2>Калькулятор госпошлины</h2>
+						<p>Пятнадцать рабочих дней с даты решения суда первой инстанции</p>
+					</header>
+					<div class="box">
+						<form>
+							<div class="fields">
+                                <div class="field half"><p>Введите сумму иска</p>    </div>
+								<div class="field half"><input type="number" step="0.01" min=0 id="summa_iska"></div>
+								<div class="field half"><p>Введите ответчика</p>    </div>
+								<div class="field half"><input type="text" id="otvetchik"></div>
+								<div class="field half"><p>Введите суд</p>    </div>
+								<div class="field half"><input type="text" id="court"></div>
+                                <div class="field half"><p>Госпошлина составляет</p>    </div>
+								<div class="field half"><output class="form-control form-control-lg" id="gp"></output></div>
+
+							</div>
+                            <ul class="actions special">
+                            <button id="btn-gp" type="button">Рассчитать госпошлину</button>
+                                </ul>
+							<ul class="actions special">
+                            <button id="btn-zayavka" type="button">Заполнить заявку</button>
+                                </ul>
+							<ul class="actions special">
+                            <button id="btn-url" type="button">Открыть ссылку на реквизиты</button>
+                                </ul>
+
+						</form>
+					</div>
+				</div>
+			</section>
+		<section  class="main style3 secondary">
+		</section>
+
+
+
+
+<script src="main.js"></script>
+   <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+</body>
+</html>
