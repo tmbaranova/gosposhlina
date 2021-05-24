@@ -503,7 +503,7 @@ input, select, textarea {
 		font-family: "Source Sans Pro", "sans-serif";
 		font-weight: 300;
 		font-size: 18pt;
-		line-height: 1.75em;
+		line-height: 1.5em;
 		color: #39454b;
 		letter-spacing: 0.025em;
 	}
@@ -850,7 +850,10 @@ input, select, textarea {
 	input[type="tel"],
 	input[type="search"],
 	input[type="url"],
+	input[type="number"],
+	input[type="date"],
 	select,
+	output,
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -877,7 +880,10 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		input[type="search"]:focus,
 		input[type="url"]:focus,
+		input[type="number"]:focus,
+	    input[type="date"]:focus,
 		select:focus,
+		output:focus,
 		textarea:focus {
 			border-color: #9ac8e9;
 		}
@@ -888,6 +894,12 @@ input, select, textarea {
 	input[type="tel"],
 	input[type="search"],
 	input[type="url"],
+	input[type="number"],
+	input[type="date"],
+	output {
+		min-height: 3em;
+	}
+
 	select {
 		line-height: 1.35em;
 	}
