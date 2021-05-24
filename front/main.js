@@ -21,7 +21,10 @@ async function fill_the_form (){
     let court = document.getElementById("court").value;
 
         // теперь передаем значение в Python для обработки
-    await eel.fill_the_form_py(summa_iska, court, otvetchik)();
+    let gp = await eel.fill_the_form_py(summa_iska, court, otvetchik)();
+    document.getElementById("gp").innerHTML = gp[0];
+    document.getElementById("court").value = gp[1];
+    document.getElementById("otvetchik").value = gp[2];
 
 
 

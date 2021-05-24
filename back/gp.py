@@ -81,18 +81,22 @@ def open_url(court):
 def zayava_for_event(summa_iska, sud, otvetchik):
     """Запуск функции создания заявки по событию нажатие на кнопку"""
     if summa_iska == '' or summa_iska == 0:
-        return f'Неверно указана сумма иска'
+        return
     elif sud == '' and otvetchik == '':
         gp = gosposhlina(summa_iska)
         sud = 'АС г. Москвы'
         otvetchik = 'ОАО"РЖД"'
         zayava_word(summa_iska, gp, sud, otvetchik)
+        lst = [gp, sud, otvetchik]
+        return lst
 
     elif sud == '' or otvetchik == '':
-        return f'Заполните поле ответчик/суд'
+        return
     else:
         gp = gosposhlina(summa_iska)
         zayava_word(summa_iska, gp, sud, otvetchik)
+        lst = [gp, sud, otvetchik]
+        return lst
 
 
 

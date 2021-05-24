@@ -7,4 +7,4 @@ if __name__ == '__main__':
         "chrome",
         "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
     )
-    eel.start('index.html', mode="chrome", size=(760, 815))
+    eel.start('index.html', mode="chrome", size=(760, 855))

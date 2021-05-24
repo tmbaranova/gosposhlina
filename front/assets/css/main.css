@@ -897,7 +897,8 @@ input, select, textarea {
 	input[type="number"],
 	input[type="date"],
 	output {
-		min-height: 3em;
+	    text-align: left;
+		min-height: 3.5em;
 	}
 
 	select {
