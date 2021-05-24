@@ -668,10 +668,12 @@ input, select, textarea {
 		color: #ffffff;
 		cursor: pointer;
 		display: inline-block;
+		width: 14em;
 		height: 3.5em;
 		line-height: 3.5em;
+
 		outline: 0;
-		padding: 0 2em 0 2em;
+		padding: 0 1em 0 1em;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
@@ -2035,7 +2037,7 @@ input, select, textarea {
 
 		.main.style3 {
 			text-align: center;
-			padding: 3em 0 0;
+			padding: 2em 0 0;
 		}
 
 			.main.style3 .content > header {
@@ -2144,7 +2146,7 @@ input, select, textarea {
 
 			.main.style3 {
 				text-align: center;
-				padding: 3em 10px 3em 10px;
+				padding: 3em 5px 3em 5px;
 			}
 
 		}

@@ -1,5 +1,6 @@
 from docxtpl import DocxTemplate #для создания док-та на основе вордовского шаблона
 import datetime
+import json
 import subprocess #для открытия файла программой по-умолчанию
 
 import webbrowser
@@ -83,15 +84,16 @@ def zayava_for_event(summa_iska, sud, otvetchik):
         return f'Неверно указана сумма иска'
     elif sud == '' and otvetchik == '':
         gp = gosposhlina(summa_iska)
-        zayava_word(summa_iska, gp, sud='АС г. Москвы', otvetchik='ОАО"РЖД"')
-        return
+        sud = 'АС г. Москвы'
+        otvetchik = 'ОАО"РЖД"'
+        zayava_word(summa_iska, gp, sud, otvetchik)
+
     elif sud == '' or otvetchik == '':
         return f'Заполните поле ответчик/суд'
     else:
         gp = gosposhlina(summa_iska)
         zayava_word(summa_iska, gp, sud, otvetchik)
-        lst = [gp, sud, otvetchik]
-        return lst
+
 
 
 def zayava_word(summa, gp, sud, otvetchik):

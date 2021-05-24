@@ -21,9 +21,9 @@ async function fill_the_form (){
     let court = document.getElementById("court").value;
 
         // теперь передаем значение в Python для обработки
-    let array = await eel.fill_the_form_py(summa_iska, court, otvetchik)();
-    document.getElementById("otvetchik").innerHTML = array;
-    document.getElementById("court").innerHTML = array;
+    await eel.fill_the_form_py(summa_iska, court, otvetchik)();
+
+
 
 
 }

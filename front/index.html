@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <script type="text/javascript" src="/eel.js"></script>
-    <title>Калькулятор вступления в силу решения суда</title>
+    <title>Калькулятор госпошлины</title>
 </head>
 
 <body class="is-preload">
@@ -25,7 +25,9 @@
                 <section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header><h2>Калькулятор госпошлины</h2>
-						<p>Пятнадцать рабочих дней с даты решения суда первой инстанции</p>
+						<p>Рассчитать размер госпошлины, заполнить заявку на ее оплату и
+							открыть страницу с банковскими реквизитами получателя в зависимости от суда,
+							в котором будет рассматриваться дело</p>
 					</header>
 					<div class="box">
 						<form>
@@ -40,15 +42,18 @@
 								<div class="field half"><output class="form-control form-control-lg" id="gp"></output></div>
 
 							</div>
-                            <ul class="actions special">
+							<div class="fields">
+                            <div class="field third">
                             <button id="btn-gp" type="button">Рассчитать госпошлину</button>
-                                </ul>
-							<ul class="actions special">
+                                </div>
+							<div class="field third">
                             <button id="btn-zayavka" type="button">Заполнить заявку</button>
-                                </ul>
-							<ul class="actions special">
-                            <button id="btn-url" type="button">Открыть ссылку на реквизиты</button>
-                                </ul>
+                                </div>
+
+							<div class="field third">
+                            <button id="btn-url" type="button" >Открыть реквизиты</button>
+                               </div>
+							</div>
 
 						</form>
 					</div>
