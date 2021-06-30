@@ -1,8 +1,6 @@
-from docxtpl import DocxTemplate #для создания док-та на основе вордовского шаблона
+from docxtpl import DocxTemplate
 import datetime
-import json
-import subprocess #для открытия файла программой по-умолчанию
-
+import subprocess
 import webbrowser
 
 courts_dict = {
@@ -34,7 +32,7 @@ courts_dict = {
 }
 
 
-def gosposhlina(summa_iska):  # аргумент - строка
+def gosposhlina(summa_iska):
     """Функция расчета госпошлины по сумме иска"""
     summa_iska = float(summa_iska)
     if summa_iska <= 100000:
@@ -59,7 +57,8 @@ def gosposhlina(summa_iska):  # аргумент - строка
 
 
 def url(court):
-    """Функция, определяющая ссылку на страницу с реквизитами по наименованию суда"""
+    """Функция, определяющая ссылку на страницу
+    с реквизитами по наименованию суда"""
     url = ''
     for court_name in courts_dict:
         if court_name in court:
@@ -99,14 +98,14 @@ def zayava_for_event(summa_iska, sud, otvetchik):
         return lst
 
 
-
 def zayava_word(summa, gp, sud, otvetchik):
     """Создание заявки на основе вордовского шаблона"""
     doc = DocxTemplate("шаблон.docx")
     now = datetime.datetime.today()
     now = now.strftime("%d.%m.%Y")
-    context = {'otvetchik': otvetchik, 'sud': sud, 'gp': gp, 'summa_iska': summa, 'data': now}
+    context = {'otvetchik': otvetchik, 'sud': sud, 'gp': gp,
+               'summa_iska': summa, 'data': now}
     doc.render(context)
     doc.save("шаблон-final.docx")
-    subprocess.Popen("шаблон-final.docx", shell=True)  # открыть файл программой по-умолчанию
+    subprocess.Popen("шаблон-final.docx", shell=True)
 
